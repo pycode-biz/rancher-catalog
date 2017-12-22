@@ -1,0 +1,20 @@
+version: '2'
+.catalog:
+  name: "Apache|Grav"
+  version: "0.1.0"
+  description: |
+    Grav is a Fast, Simple, and Flexible file-based Web-platform.
+  minimum_rancher_version: v1.1.0
+  maximum_rancher_version: v1.99.99
+  questions:
+    - variable: "EXPOSED_PORT"
+      label: Port
+      description: "Which port should Grav should be available?"
+      default: 8000
+      required: true
+      type: string
+    - variable: "SHARED"
+      label: Volume
+      description: "Volume to servce content from. If supplied, the volume should be empty"
+      required: false
+      type: string
